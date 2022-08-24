@@ -8,6 +8,7 @@ using Myra.Utility;
 #if MONOGAME || FNA
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Forms.Controls;
 #elif STRIDE
 using Stride.Engine;
 using Stride.Graphics;
@@ -30,9 +31,9 @@ namespace Myra
 
 #if MONOGAME || FNA || STRIDE
 
-		private static Game _game;
+		private static MonoGameControl _game;
 
-		public static Game Game
+		public static MonoGameControl Game
 		{
 			get
 			{
