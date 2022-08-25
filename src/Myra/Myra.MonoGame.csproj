@@ -3,12 +3,25 @@
     <DefineConstants>$(DefineConstants);MONOGAME</DefineConstants>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Myra</AssemblyName>
-    <PackageId>Myra</PackageId>
+    <PackageId>Myra.Forms</PackageId>
     <OutputPath>bin\MonoGame\$(Configuration)</OutputPath>
+    <RootNamespace>Myra</RootNamespace>
+    <Description>UI Library for MonoGame within Winforms.
+Lacks TouchPanel support.</Description>
+    <PackageProjectUrl>https://github.com/Paul-Arnett/Myra/tree/master</PackageProjectUrl>
+    <Version>1.4.2.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>

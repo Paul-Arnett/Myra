@@ -950,10 +950,11 @@ namespace Myra.Graphics2D.UI
 			}
 		}
 
-#if MONOGAME || FNA || PLATFORM_AGNOSTIC
+#if  FNA || PLATFORM_AGNOSTIC
 		public void UpdateTouch()
 		{
-#if MONOGAME || FNA
+#if  FNA
+
 			var touchState = TouchPanel.GetState();
 #else
 			var touchState = MyraEnvironment.Platform.GetTouchState();
@@ -1156,7 +1157,7 @@ namespace Myra.Graphics2D.UI
 			UpdateMouseInput();
 			UpdateKeyboardInput();
 
-#if MONOGAME || FNA
+#if FNA
 			try
 			{
 				UpdateTouch();
